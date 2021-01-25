@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Controller;
+use App\Http\Controllers\Controller ;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,3 +13,5 @@ use App\Http\Controllers\Controller;
 |
 */
 Route::get('/', ['uses' => 'Controller@homepage']);
+Route::get('/cadastro', ['uses' => 'Controller@cadastrar']);
+Route::get('/login', ['uses' => 'Controller@fazerLogin']);

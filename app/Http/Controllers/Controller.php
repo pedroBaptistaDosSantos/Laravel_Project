@@ -15,4 +15,12 @@ class Controller extends BaseController
     {
       echo "Tudo funcionando corretamente";
     }
+    public function cadastrar()
+    {
+      echo "Tela de cadastro";
+    }
+    public  function fazerLogin()
+    {
+      echo "Tela de login";
+    }
 }
