@@ -1,25 +1,30 @@
 <?php
 
-namespace App\Models;
+namespace App\Entities;
 
-use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Eloquent\softDeletes;
 
-class User extends Authenticatable
+class UserSocial extends Model
 {
-    use HasFactory, Notifiable;
+    use softDeletes, Notifiable;
 
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
+
+    protected $table = 'users';
+
     protected $fillable = [
-        'name',
-        'email',
-        'password',
+      'user_id',
+'social_network',
+'social_id',
+'social_email',
+'social_avatar',
     ];
 
     /**
@@ -40,4 +45,5 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
 }

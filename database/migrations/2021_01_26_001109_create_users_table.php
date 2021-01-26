@@ -32,7 +32,7 @@ class CreateUsersTable extends Migration
 
 						//Permission
 						$table->string('status')->default('active');
-						$table->string('permission')->default('app.user')
+						$table->string('permission')->default('app.user');
 
 						$table->rememberToken();
             $table->timestamps();
@@ -47,6 +47,10 @@ class CreateUsersTable extends Migration
 	 */
 	public function down()
 	{
+		Schema::table('users', function(Blueprint $table)
+		{
+
+		});
 		Schema::drop('users');
 	}
 }
